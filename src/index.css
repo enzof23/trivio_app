@@ -1,13 +1,105 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Quantico:wght@100;300;400;500;700;900&display=swap");
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Quantico", sans-serif;
+  transition: all 0.25s ease-in;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements */
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+#root {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #eaeaea;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.app__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  gap: 2rem;
+
+  margin: 6vh auto 2rem auto;
+  width: 90%;
+}
+
+@media screen and (max-width: 996px) {
+  .body__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 1.5rem auto;
+    gap: 1.5rem;
+  }
+}
+
+button {
+  color: white;
+  cursor: pointer;
+
+  border: none;
+  border-radius: 8px;
+  box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.25);
+
+  padding: 0.35rem 1.25rem;
+  transition: all 0.25s ease-in;
+}
+
+button:hover {
+  box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.5);
 }
